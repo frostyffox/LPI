@@ -18,9 +18,9 @@ root.destroy()
 
 
 #______Video Source______
-source_path = '/Users/giuliadirocco/Desktop/Screen Recording 2025-09-04 at 15.24.52.mov'
+source_path = 'euglena.mov'
 #cap = cv2.VideoCapture(source_path)  #if i use a video saved on pc
-cap = cv2.VideoCapture(0)  #if i plug my phone with usb 
+cap = cv2.VideoCapture(1)  #if i plug my phone with usb 
 
 #____Tracking parameters______
 maxTrail = 30 

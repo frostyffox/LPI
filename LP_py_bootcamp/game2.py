@@ -38,11 +38,11 @@ def guess(pi,rn):
                 print("Too small!")
                 
             # if gs > rn : "Too big", prompt again
-            if gs > rn:
+            elif gs > rn:
                 print("Too big!")
                 
             # if gs == rn : Just right, exit
-            if gs == rn:
+            elif gs == rn:
                 print("Just right!")
                 break
         except ValueError:
