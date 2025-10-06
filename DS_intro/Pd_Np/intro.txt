@@ -1,0 +1,95 @@
+VIBE CODING: partnering with an AI to code
+- downsides: might not be very educative (less discovery, more shortcutting)
+
+************************************************
+INTRO TO PANDAS & NUMPY
+************************************************
+
+Data file formats:
+- csv: comma separated values, easy to open in Excel/Sheets
+- json: hierarchical/nested, flexible but harder to read in spreadsheets
+- xls / xlsx: Excel native format
+- parquet: compressed + optimized, lighter, but not human-readable in editors
+- pickle: Python-specific serialized format (fast but not cross-language)
+- db: database tables (SQL, SQLite, etc.)
+
+Notes:
+- JSON less easy to inspect in Excel than CSV
+- Parquet = optimized for speed/size, not for manual reading
+
+In data analysis you MIGHT have a question to answer through data.
+
+Pandas == "Python enhanced Google Sheet"
+- Deals with arrays, lists, n-dimensional arrays
+- Based on Numpy
+- Works with:
+    - Series (1D)
+    - DataFrames (2D)
+
+Numpy:
+- C implementation -> very efficient
+- Good for arrays, matrices, reshaping
+- VECTORISATION = operations on entire arrays (no explicit loops)
+- Enabled by underlying C code
+
+Good practice: call dataframes 'df'
+
+
+
+-----> PANDAS METHODS
+
+.info() : n rows, n cols, memory usage, data types
+.head() : first n rows
+.dtypes() : 
+.size() : 
+.describe() : numeric features (basic statistics)
+.isna() : check the null values
+.dropduplicates() 
+.dropna() -> depends on how many rows are concerned wiht null values
+
+------> CSV example:
+
+temp, country
+28.7, "France"
+26.5, "Italy"
+"23.4", "Spain"
+
+If pd loads this file:
+- country -> object
+- temp -> object (because of "23.4" as string)
+
+
+-----> INDEXING & SELECTION
+
+- df.loc[...] = label-based selection (rows/cols by name)
+- df.iloc[...] = position-based selection (rows/cols by index number)
+
+Masking vs Loc:
+- Masking = condition filter
+    df[df["temp"] > 25]
+- Loc = explicit selection by labels
+    df.loc[0:2, "country"]
+
+Mask = subset by condition
+Loc = subset by labels
+
+************************************************
+COMMON GOTCHAS
+************************************************
+- Strings that look like numbers → column type = object
+    fix with pd.to_numeric(df["col"], errors="coerce")
+- Missing values = NaN
+    handle with:
+        df.dropna()
+        df.fillna(value)
+- Strings in pandas = dtype "object"
+
+************************************************
+WORKFLOW FOR DATA ANALYSIS
+************************************************
+1. Load data (pd.read_csv, pd.read_json, etc.)
+2. Inspect (df.head(), df.info(), df.describe())
+3. Clean (fix dtypes, handle NaN, rename cols)
+4. Analyze (masking, grouping, aggregations)
+5. Visualize (matplotlib, seaborn, etc.)
+

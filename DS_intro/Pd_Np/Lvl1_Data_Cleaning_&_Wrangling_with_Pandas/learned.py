@@ -25,6 +25,7 @@ missing = fn.columns[fn.isna().any()]
 #2: FILLING
 # use 'mode' to fill in categorical data
 # use 'mean' or 'median' for numeric values
+# ok for NORMAL distribution
 
 #3: INTERPOLATING
 # when you have some gaps that can be filled with near values

@@ -1,0 +1,36 @@
+----- DATA QUERYING : SELECT
+
+- select: specify the column to read
+select col1, col2, ... from table table_name;
+select * from table_name; -> all the columns
+
+- where: specify a condition
+select * from table_name where condition
+operators:
+    - comparison
+    - pattern matching
+    - logical: AND, NOT, OR 
+    - NULL check
+
+- order by: ordering the data retireved
+
+select col1, col2 from table_name order by col1 [asc|desc]
+
+- limit: limiting the result
+select * from table-name limit 10;
+
+- JOIN: reach several tables at the same time
+    - inner JOIN: rows that have matching values in both tales
+    - outer join: less frequent
+        - left join
+        - right join
+        - full outer join : matching all the rows of a table with all the 
+                            rows from another table (all" A-intersection-B", 
+                            "A not B" and "B not A")
+    - cross join
+
+    - aggregations:
+        - count
+        - sum
+        - average
+        - min/max
