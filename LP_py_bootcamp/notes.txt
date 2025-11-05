@@ -1,6 +1,0 @@
-Python Intro course day 1-5
-
-Topiccs
-- variables and functions
-- loops
-    if-elif-else, match, while, 
