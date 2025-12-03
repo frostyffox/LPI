@@ -1,0 +1,67 @@
+------- NUMPY ---------
+- Np arrays
+basic object for NUMPY
+it is a 'monotype' list -> faster thanks to pre-allocated memory
+
+- Np data types
+int (1,2,3), float (1., 2.3 , 0.4), bool, str, complex
+
+C           vs      NUMPY
+bool                bool
+short               int16
+int                 int32
+long                int32 or int64
+float               float32
+float complex       complex64
+long double         float96 or 128
+double complex      complex128
+long double cplx    complex192 or 256
+signed char         int8
+unsigned char       uint8
+
+------ MATRICES --------
+A = [ 2     5
+      3     4]
+
+V = [x
+     y]
+
+A*V = [ 2x + 5y
+        3x + 4y]
+
+M 3x8 = matrix with 3 rows and 8 cols
+M2 3x4
+M x M2 = 4x3
+
+I can only multiply 2 matrices if X_M1 == Y_M2 (they have the same lenght for the opposite dimension)
+
+------ Numpy functions -------
+
+np.mean() -> mean of an arrays
+
+L = [18, 2, 44, 43]
+np.mean(L)
+
+all elements of L must be of the same type (numeric)
+
+Creating an array from a list
+L = [[-2,-1,1,2], [-2, -1, 2, 1]]
+L_array = np.array(L)
+L_array.shape
+
+#creating an array directly
+A = np.ones(10)
+print(A)
+
+B = np.ones([10,10]) -> 10x10 matrix filled with 1 (all float)
+
+C = np.random.randint(0,10,[5,5]) -> empty matrix filled with random integers between 0 and 10,
+                                    pf size 5x5
+
+#dot product:
+A = np.random.randint(0,100,[4,5])
+B = np.random.randint(0,10, [5,2])
+print(np.dot(A,B)) -> will be a 4x2 matrix
+
+
+

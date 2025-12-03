@@ -1,0 +1,56 @@
+LIVE EXTRACTION
+
+1. SCRAPING AND LOADING TEXT
+"scraping' = get data from web
+
+steps:
+A. scraping
+B. parsing
+
+requires familiarity with html
+- nowadays it becomes more complicated due to limits and countermeasures
+- ex: newspapers have paywalls
+
+html code -> parsing -> data
+
+--- in python
+import requests
+req = requests.get(url)
+req.text
+
+--- python tools
+Beautiful soup
+
+-----
+
+HTML : hyper text markup language
+for the content
+css -> design
+js -> interaction
+
+'scraping' = get some data from the html code of a page
+
+html code is hierarchical
+<html>
+    <head>
+        <title>
+        ....
+        </title>
+        ...
+- head -> title
+- body -> content   
+    tags for paragraphs
+
+2. API
+
+CRUD:
+create 
+req
+
+GET = query data
+you send parameters in a transparent way
+
+PUT
+POST= modify data
+
+DELETE
